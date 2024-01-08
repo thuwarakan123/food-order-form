@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pizza order form</title>
+	
+	<link rel="stylesheet" href="pizza_form_style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+ 
+</head>
+
+<body>
+	
+
+	
+<div class="container">
+	
+	<!-- ---------------------- Header ---------------------- -->
+	<div id="header"><img class="logo" src="images/logo.png"/>
+	  <h1> Pizza Sunshine!</h1>
+		<div class="title">
+			<h2> FOOD ORDER FORM</h2>
+      </div>
+	</div>
+	
+	<!-- ---------------------- Form ---------------------- -->
+  <form action="/action_page.php">
+	<div class="fielset-bg"> <!-- ------------- Pizza type group  --------------->
+		<h4> Select the pizza you want to order</h4>
+			
+		<!-- ------------- Pizza type ---------------- -->
+		<div class="row">
+			  <div class="col-20">
+				<h3>Pizza types *</h3> <!-- The label element acts as a heading to identify the group -->
+			  </div>
+			  <div class="col-80">
+			    <select id="pizzatype" name="pizzatype">
+					<optgroup > <!-- The label attribute of the optgroup element is used to provide a label for the group -->
+						<option value="Veggi_1" >Margherita: Mozzarella cheese & tomato</option>
+						<option value="Veggi_2">Hawaian: ham & pineapple</option>
+						<option value="Veggi_3">Heavenly veg: 4 cheese, mushrooms, peppers & fresh rocket</option>
+					</optgroup>
+					<optgroup >
+						<option value="Chicken_1">Paprika pulled chicken, roquito chilli peppers, red onions & mixed peppers</option>
+						<option value="Chicken_2">Supreme: Chicken breast, olives, beef, pepperoni, red onions & mixed peppers</option>
+						<option value="Chicken_3">Chicken delight: Chicken breast, mushrooms & red onions topped with rocket</option>
+					</optgroup>
+					<optgroup >
+						<option value="Meat_1">Meat coctail: Ham, meatballs, red onions & mixed peppers</option>
+						<option value="Meat_2">Peperoni: peperoni, olives, red onions & mixed peppers</option>
+						<option value="Meat_3">BBQ steak: Steak, onion & peppers, BBQ sauce topped with rocket</option>
+					</optgroup>
+				 </select>
+				</div>			
+		</div>	
+				
+		<!-- ------------- Pizza base ---------------- -->
+			
+		<div class="row">
+			<div class="col-20">
+				<h3>Select pizza base *</h3>
+			</div>
+			<fieldset for="pizzabase">
+				<div class="col-20">
+					<input type="radio" name="pizzabase" id="thin" value="thin" checked>
+					<label for="thin">Thin base</label> <!-- Explicit labelling outside the control in order to seperate the label from the control -->
+				</div>
+				<div class="col-20">
+					<input type="radio" name="pizzabase" id="thick" value="thick">
+					<label for="thick">Thick base</label>
+				</div>
+				<div class="col-20">
+					<input type="radio" name="pizzabase" id="flat" value="flat">
+					<label for="flat">Flat base</label>
+				</div>
+			</fieldset>
+		</div>
+		
+		<!-- ------------- Pizza crust ---------------- -->
+		<div class="row">
+			<div class="col-20">
+				<h3>Select pizza crust *</h3>
+			</div>
+			<fieldset for="pizzabase">
+			  <div class="col-20">
+				<input type="radio" name="pizzacrust" id="txt" value="plain" checked>
+				<label for="plain">Plain</label>
+			  </div>
+			  <div class="col-20">
+				<input type="radio" name="pizzacrust" id="txt" value="stuff">
+				<label for="stuff">Stuff Crust</label>
+			  </div>
+			</fieldset>
+		</div>
+	  	
+  		<!-- ------------- Pizza Toppings ---------------- -->
+		<div class="row">
+			<div class="col-20">	  
+				<h3>Extra toppings</h3>
+			  </div>
+			<fieldset for="topping">
+			  <div class="col-20">
+				<input type="checkbox" name="topping" id="check_1" value="extra_cheese">
+				<label for="check_1">Cheese</label>
+			  </div>
+			  <div class="col-20">
+				<input type="checkbox" name="topping" id="check_2" value="extra_vegetables">
+				<label for="check_2">Vegetables</label>
+			  </div>
+			  <div class="col-20">
+				<input type="checkbox" name="topping" id="check_3" value="extra_ham">
+				<label for="check_3">Ham</label>
+			  </div>
+			  <div class="col-20">
+				<input type="checkbox" name="topping" id="check_4" value="extra_pineapple">
+				<label for="check_4">Pineapple</label>
+			  </div>
+			</fieldset>
+		</div>
+  		
+		<!-- ------------- Pizza Size ---------------- -->
+
+		<div class="row">
+			  <div class="col-20">
+				<h3>Pizza size *</h3>
+			  </div>
+			<fieldset for="pizzasize">
+			  <div class="col-20">
+				<input type="radio" name="pizzasize" id="size-i" value="individual" checked>
+				<label for="txt">Individual</label>
+			  </div>
+			  <div class="col-20">
+				<input type="radio" name="pizzasize" id="size-m" value="medium">
+				<label for="txt">Medium</label>
+			  </div>
+			  <div class="col-20">
+				<input type="radio" name="pizzasize" id="size-l" value="large">
+				<label for="txt">Large</label>
+			  </div>
+			</fieldset>
+		</div>
+
+		<!-- ------------- Number of Pizzas ---------------- -->
+		<div class="row">
+			  <div class="col-20">
+				<h3>Number *</h3>
+			  </div>
+			  <div class="col-20">
+				<input type="number" name="pizzanum" min="1" max="8">
+			  </div>
+			</div>
+
+		<!-- ------------- Notes  ---------------- -->
+		<div class="row">
+			<div class="col-20">
+				<h3>Notes: </h3>
+			</div>
+			<div class="col-80">
+				<textarea name="notes" id="notes" rows="5" cols="1">....
+				</textarea>
+			</div>
+		</div>
+	  </div> <!-- ------------- End of Pizza type group --------------->
+	
+	  
+	  
+		<div class="fielset-bg"> <!-- -------------  Customer details group ------------- -->
+			<h4> Customer details</h4>
+						
+			<div class="row">
+			  <div class="col-20">
+				<h3>Name *</h3>
+			  </div>
+			  <div class="col-80">
+				<input type="text" id="fname" name="firstname" placeholder="" required>
+			  </div>
+			</div>
+			
+			<div class="row">
+			  <div class="col-20">
+				<h3>Surname</h3>
+			  </div>
+			  <div class="col-80">
+				<input type="text" id="lname" name="lastname" placeholder="" required >
+			  </div>
+			</div>
+			
+			<div class="row">
+			  <div class="col-20">
+				<h3>Phone *</h3>
+			  </div>
+			  <div class="col-80">
+				<input type="tel" inputmode="numeric" id="tel" name="tel" minlength="11"
+       maxlength="11" size="11" placeholder="" required >
+			  </div>
+			</div>
+			
+		</div> <!-- ------------- End of customer details group ------------- -->
+
+	  
+	  <!-- ------------- Delivery information --------- -->
+	  
+		<div class="fielset-bg"> <!-- ------------- Delivery information group -->
+			<h4> Delivery information</h4>
+					
+		<div class="row">
+		  <div class="col-20">
+			<h3>Delivery area *</h3>
+		  </div>
+		  <div class="col-80">
+			<select id="area" name="area" required>
+			  <option value="North London">North London</option>
+			  <option value="South London">South London</option>
+			  <option value="East London">East London</option>
+			  <option value="West London">West London</option>
+			  <option value="Central London">Central London</option>
+			</select>
+		  </div>
+		</div>
+			
+		<div class="row">
+			<div class="col-20">
+				<h3>Street *</h3>
+			 </div>
+			<div class="col-80">
+				<input type="text" id="street" name="street" placeholder="" required >
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-20">
+				<h3>Number *</h3>
+			 </div>
+			<div class="col-80">
+				<input type="text" id="streetnum" name="streetnum" placeholder="" required >
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-20">
+				<h3>IP code *</h3>
+			 </div>
+			<div class="col-80">
+				<input type="text" id="ip" name="ip" placeholder="" required >
+			</div>
+		</div>
+			
+		<div class="row">
+		  <div class="col-20">
+			<h3>Delivery time *</h3>
+		  </div>
+		<div class="col-80">
+			<select id="time" name="time" required >
+			  <option value="15mins">In 15 minutes</option>
+			  <option value="30mins">In 30 minutes</option>
+			  <option value="45mins">In 45 minutes</option>
+			  <option value="1hour">In 1 hour</option>
+			  <option value="2hours">In 2 hours</option>
+			</select>
+		  </div>
+		</div>
+			
+		</div> <!-- ------------- End of delivery information group -->
+		
+	 <!-- ------------- Payment details --------- -->	
+	  
+		<div class="fielset-bg"> <!-- ------------- Payment details -->
+		<h4> Payment details </h4>
+					
+		<div class="row">
+		  <div class="col-20">
+			<h3>Select card *</h3>
+		  </div>
+		  <div class="col-80">
+			<select id="area" name="area" required >
+			  <option value="VISA">VISA **** **** **** 1234 </option>
+			  <option value="MASTER">MASTER **** **** **** 2345</option>
+			  <option value="DELTA">DELTA **** **** **** 3456</option>
+			</select>
+		  </div>
+		  <span class="add"><a href="#">Add New card</a></span>
+		</div>
+			
+		<div class="row">
+		<div class="col-20">
+			<h3>Security Code *</h3>
+		</div>
+		<div class="col-20">
+			<input type="password" inputmode="numeric" id="securitycode" name="securitycode" minlength="3"
+       maxlength="3" size="3" required placeholder="">
+		</div>
+		<div class="col-20">
+		    <img class="card" src="images/card.png" />
+		</div>
+		</div>
+			
+		</div> <!-- ------------- End of payment details group -->
+		
+		<div class="row">
+		  <input type="submit" name="submit" value="Submit">
+		</div>
+
+  </form>
+
+
+  <!-- ---------------------- Footer -------------------------- -->
+<div id="footer">
+	<div id="vouchers">
+	  <img class="voucher" src="images/copy.png" />
+	  <h3> Vouchers</h3>
+	<p> More information about vouchers</p>
+	</div>
+	
+	<div id="contact">
+		<h3>Contact</h3>
+		<p><img class="icon" src="images/tel.png"  />tel: ++ 020 4567 98765</p>
+	    <p><img class="icon" src="images/email.png" />email: validemail@hotmal.com</p>
+	</div>
+	</div>
+</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* Style for the unordered list */
+ul {
+    list-style-type: none; /* Takes away the bullet points */
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+	overflow:hidden;  /* The overflow is clipped, and the rest of the content will be invisible */
+}
+
+li {
+   float:left; /* Aligns the list items one next to each other in one line */
+}
+
+#mainNav li:last-child { /*Applies the style only to the last item of the list with ID-mainNav (the search) and prevents other ul lists in the document to follow this style */
+}
+
+li a {
+    display: block; /* Creates a block around the list items */
+    color: #000;
+	padding: 8px 8px;
+	text-align: center;
+    text-decoration: none;
+}
+
+/* Makes the selected/active element stand out from the rest of the list items */
+li a.active {
+	background-color: darkorange;
+}
+
+/* Change of style of the contet when we hover the link with the mouse cursor */
+li a:hover:not(.active) {
+    background-color: darkorange;
+    color: white;
+}
+
+
+/* Footer navigation */
+
+
+
+	
+	
